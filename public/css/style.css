@@ -1,0 +1,12 @@
+.main-header-logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5rem;
+}
+.main-header-p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+#deleteModalLabel {
+    text-align: center;
+}
