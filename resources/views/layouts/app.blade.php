@@ -128,7 +128,7 @@
             @endif
 
             <div class="row mt-5">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <ul class="list-group list-group-flush">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -181,7 +181,7 @@
                     </ul>
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     @yield('content')
                 </div>
             </div>

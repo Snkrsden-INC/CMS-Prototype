@@ -44,7 +44,7 @@
             Product::create([
                 'name' => $request->name,
                 'desc' => $request->desc,
-                'image' =>$request->file('image')->store('products','public'),
+                'image' => $request->file('image')->store('products', 'public'),
                 'release_date' => $request->release_date,
                 'price' => $request->price,
             ]);
@@ -64,7 +64,7 @@
          */
         public function show(Product $product)
         {
-            //
+            return view('products.show');
         }
 
         /**
@@ -75,7 +75,8 @@
          */
         public function edit(Product $product)
         {
-            //
+
+            return view('products.create')->with('product', $product);
         }
 
         /**
@@ -87,8 +88,13 @@
          */
         public function update(Request $request, Product $product)
         {
-            //
+            $product->update($request->all());
+
+            session()->flash('success', "$product->name updates successfully.");
+
+            return redirect(route('products.index'));
         }
+
 
         /**
          * Remove the specified resource from storage.
@@ -100,12 +106,9 @@
         {
             $product = Product::withoutTrashed()->where('id', $id)->firstOrFail();
 
-            if ($product->trashed())
-            {
+            if ($product->trashed()) {
                 $product->forceDelete();
-            }
-            else
-            {
+            } else {
                 // Delete product(Product model has soft delete)
                 $product->delete();
             }

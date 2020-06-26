@@ -15,6 +15,7 @@
                     <thead>
                     <tr>
                         <th class="text-center">Name</th>
+                        <th class="text-center">View</th>
                         <th class="text-center">Description</th>
                         <th class="text-center">Image</th>
                         <th class="text-center">Release Date</th>
@@ -28,6 +29,11 @@
                         @foreach($products as $product)
                             <tr>
                                 <td class="pt-3-half" contenteditable="true">{{ $product->name }}</td>
+                                <td class="pt-3-half">
+                                    <a href="{{ route('products.show', $product) }}" class="btn btn-success btn-rounded btn-sm">
+                                        Show Case
+                                    </a>
+                                </td>
                                 <td class="pt-3-half" contenteditable="true">{{ $product->desc }}</td>
                                 <td class="pt-3-half" contenteditable="true">
                                     <img src="{{ asset('storage/'.$product->image) }}" alt="thumbnail"

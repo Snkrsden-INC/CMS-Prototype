@@ -5,7 +5,7 @@
     <div class="card">
 
         <h5 class="card-header warning-color-dark white-text text-center py-4">
-            <strong>Add Product</strong>
+            <strong>{{ isset($product) ? "Update {$product->name}" : "Create Product" }}</strong>
         </h5>
 
         <!--Card content-->
@@ -13,41 +13,72 @@
 
             <!-- Form -->
             <form class="text-center" style="color: orange;"
-                  action="{{ route('products.store') }}" method="POST"
+                  action="{{ isset($product) ? route('products.update', $product) : route('products.store')}}"
+                  method="POST"
                   enctype="multipart/form-data">
             @csrf
+            @if(isset($product))
+                @method('PUT')
+            @endif
+
             <!-- Name -->
                 <div class="md-form mt-3">
-                    <input name="name" type="text" id="name" class="form-control">
-                    <label for="name">Product Name</label>
+                    <input name="name" type="text"
+                           id="name" class="form-control"
+                           value="{{ isset($product->name) ? "$product->name" : "Product Name" }}">
+                    <label for="name">{{ isset($product->name) ? "$product->name" : "Product Name" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <!--Material textarea-->
                     <div class="md-form">
-                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="3"></textarea>
-                        <label for="desc">Product Description</label>
+                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->desc" : ""}}
+                        </textarea>
+                        <label for="desc">{{ isset($product) ? "$product->desc" : "Product Description" }}</label>
                     </div>
                 </div>
                 <div class="md-form mt-3">
-                    <input name="release_date" type="date" id="release_date" class="form-control">
-                    <label for="release_date">Product Release Date</label>
+                    <input name="release_date" type="date"
+                           id="release_date" class="form-control"
+                           value="{{ isset($product) ? "$product->release_date" : "" }}"
+                    >
+                    <label
+                        for="release_date">{{ isset($product->release_date) ? "$product->release_date" : "Product Release Date" }}</label>
                 </div>
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input"
-                               id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
-                               name="image">
-                        <label class="custom-file-label" for="inputGroupFile01">Product Image</label>
-                    </div>
-                    <!-- Material input -->
+                    @if (isset($product))
+                        <div class="text-center col-12">
+                            <a href="">
+                                <img src="{{ asset("storage/$product->image") }}"
+                                     alt="thumbnail" class="img-thumbnail float-left"
+                                     style="width: 200px">
+                            </a>
+                        </div>
+                    @else
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input"
+                                   id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
+                                   name="image">
+                            <label class="custom-file-label" for="inputGroupFile01">Product Image</label>
+                        </div>
+                @endif
+
+                <!-- Material input -->
                     <div class="input-group">
                         <div class="md-form">
-                            <input name="price" type="number" id="price" class="form-control" step="0.01">
-                           <label for="form1">Price</label>
-                            <small class="text-success">$USD</small>
+                            @if(isset($product))
+                                <input name="price" type="number"
+                                       id="price" class="form-control"
+                                       step="0.01" value="{{ $product->price }}">
+                                <label for="form1">{{ $product->price }}</label>
+                                <small class="text-success">$USD</small>
+                            @else
+                                <input name="price" type="number" id="price" class="form-control" step="0.01">
+                                <label for="form1">Price</label>
+                                <small class="text-success">$USD</small>
+                            @endif
                         </div>
                     </div>
                 </div>

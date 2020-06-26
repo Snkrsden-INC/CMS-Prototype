@@ -30,96 +30,7 @@
 </head>
 
 <body class="skin-light">
-
-<!--Main Navigation-->
 <header>
-
-    <!-- Navbar -->
-{{--    <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar navbar-transparent">--}}
-
-{{--        <div class="container-fluid">--}}
-
-{{--            <!-- Brand -->--}}
-{{--            <a class="navbar-brand" href="https://snkrsden.com/">--}}
-{{--                <img src="{{ asset('img/snkrs-logo-blacks.png') }}" alt="">--}}
-{{--            </a>--}}
-
-{{--            <!-- Collapse button -->--}}
-{{--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"--}}
-{{--                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">--}}
-{{--                <span class="navbar-toggler-icon"></span>--}}
-{{--            </button>--}}
-
-{{--            <!-- Links -->--}}
-{{--            <div class="collapse navbar-collapse" id="basicExampleNav">--}}
-
-{{--                <!-- Right -->--}}
-{{--                <ul class="navbar-nav ml-auto">--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link waves-effect">--}}
-{{--                            {{ isset(Auth::user()->name)  ? Auth::user()->name : ''}}--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link navbar-link-2 waves-effect">--}}
-{{--                            <span class="badge badge-pill red">1</span>--}}
-{{--                            <i class="fas fa-shopping-cart pl-0"></i>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item dropdown">--}}
-{{--                        <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink3"--}}
-{{--                           data-toggle="dropdown"--}}
-{{--                           aria-haspopup="true" aria-expanded="true">--}}
-{{--                            <i class="united states flag m-0"></i>--}}
-{{--                        </a>--}}
-{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
-{{--                            <a class="dropdown-item" href="#!">Action</a>--}}
-{{--                            <a class="dropdown-item" href="#!">Another action</a>--}}
-{{--                            <a class="dropdown-item" href="#!">Something else here</a>--}}
-{{--                        </div>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link waves-effect">--}}
-{{--                            App--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link waves-effect">--}}
-{{--                            Shop--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link waves-effect">--}}
-{{--                            Contact--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#!" class="nav-link waves-effect">--}}
-{{--                            About--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <!-- Authentication Links -->--}}
-{{--                    @guest--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('login') }}" class="nav-link waves-effect">--}}
-{{--                                Sign in--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item pl-2 mb-2 mb-md-0">--}}
-{{--                            <a href="{{ route('register') }}" type="button"--}}
-{{--                               class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign--}}
-{{--                                up</a>--}}
-{{--                        </li>--}}
-{{--                    @endguest--}}
-{{--                </ul>--}}
-
-{{--            </div>--}}
-{{--            <!-- Links -->--}}
-{{--        </div>--}}
-
-{{--    </nav>--}}
-    <!-- Navbar -->
-
     <div class="jumbotron jumbotron-image color-grey-light"
          style="background-image: url('{{ asset('img/img01.jpg') }}'); height: 500px;">
         <div class="mask rgba-black-strong d-flex align-items-center h-100">
@@ -342,175 +253,6 @@
 <!--Main layout-->
 <main>
     <div class="container">
-
-{{--        <!--Section: Block Content-->--}}
-{{--        <section>--}}
-
-{{--            <h4 class="text-center my-5"><strong>Categories</strong></h4>--}}
-
-{{--            <!-- Grid row -->--}}
-{{--            <div class="row">--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"--}}
-{{--                                 alt="Sample"--}}
-{{--                                 width="500"--}}
-{{--                                 height="500"--}}
-{{--                            >--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Dresses</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://images.pexels.com/photos/2759779/pexels-photo-2759779.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"--}}
-{{--                                 alt="Sample"--}}
-{{--                            >--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Shirts</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"--}}
-{{--                                 alt="Sample">--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Jeans</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://images.pexels.com/photos/2759779/pexels-photo-2759779.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"--}}
-{{--                                 alt="Sample">--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Shoes</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"--}}
-{{--                                 alt="Sample">--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Accessories</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--                <!-- Grid column -->--}}
-{{--                <div class="col-md-6 col-lg-4 mb-4">--}}
-
-{{--                    <!-- Card -->--}}
-{{--                    <div class="">--}}
-
-{{--                        <div class="view zoom brighten z-depth-2 rounded">--}}
-{{--                            <img class="img-fluid"--}}
-{{--                                 src="https://yankeekicks.com/wp-content/uploads/2019/07/su_sup.jpg"--}}
-{{--                                 alt="Sample">--}}
-{{--                            <a href="#!" class="text-white">--}}
-{{--                                <div class="mask card-mask-color">--}}
-{{--                                    <div class="d-flex align-items-end h-100 p-3">--}}
-{{--                                        <h5 class="mb-0">Jewelry</h5>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                    <!-- Card -->--}}
-
-{{--                </div>--}}
-{{--                <!-- Grid column -->--}}
-
-{{--            </div>--}}
-{{--            <!-- Grid row -->--}}
-
-{{--        </section>--}}
-{{--        <!--Section: Block Content-->--}}
-
         <!--Section: Block Content-->
         <section>
 
@@ -521,183 +263,645 @@
 
                 <!-- Grid column -->
                 <div class="col-md-4 mb-5">
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
 
-                    <!-- Card -->
-                    <div class="card">
+                            <!-- Front Side -->
+                            <div class="face front">
 
-                        <div class="view zoom overlay">
-                            <img class="img-fluid w-100"
-                                 src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
-                                 alt="Sample">
-                            <a href="#!">
-                                <div class="mask">
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                    <div class="mask card-up">
+                                        <img class="img-fluid w-100"
+                                             src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
+                                        <div class="mask rgba-black-slight"></div>
+                                    </div>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Jordan 7 OG Olympic (1992)
+                                    </h4>
+{{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+{{--                                        <h5>Blue denim shirt</h5>--}}
+{{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                            <p class="">Buy it now: </p>
+                                            <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-sm">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Highest Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
+                        </div>
+                    </div>
+                    <!-- Rotating card -->
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
+
+                            <!-- Front Side -->
+                            <div class="face front">
+
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="mask card-up">
                                     <img class="img-fluid w-100"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg">
+                                         src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
                                     <div class="mask rgba-black-slight"></div>
                                 </div>
-                            </a>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Jordan 7 OG Olympic (1992)
+                                    </h4>
+                                    {{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+                                        {{--                                        <h5>Blue denim shirt</h5>--}}
+                                        {{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                        <p class="">Buy it now: </p>
+                                        <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-sm">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Highest Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
                         </div>
-
-                        <div class="card-body text-center pt-4">
-
-                            <h5>Blue denim shirt</h5>
-                            <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-                            <ul class="rating">
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p><span class="mr-1"><strong>$17.99</strong></span></p>
-                            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                                    class="fas fa-shopping-cart pr-2"></i>Add to cart
-                            </button>
-                            <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                                    class="fas fa-info-circle pr-2"></i>Details
-                            </button>
-                            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
-                                    data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-                                    class="far fa-heart"></i></button>
-
-                        </div>
-
                     </div>
-                    <!-- Card -->
-
+                    <!-- Rotating card -->
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
                 <div class="col-md-4 mb-5">
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
 
-                    <!-- Card -->
-                    <div class="card">
+                            <!-- Front Side -->
+                            <div class="face front">
 
-                        <div class="view zoom overlay">
-                            <img class="img-fluid w-100"
-                                 src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
-                                 alt="Sample">
-                            <h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4>
-                            <a href="#!">
-                                <div class="mask">
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="mask card-up">
                                     <img class="img-fluid w-100"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg">
+                                         src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
                                     <div class="mask rgba-black-slight"></div>
                                 </div>
-                            </a>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Adidas Seeley 2020
+                                    </h4>
+                                    {{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+                                        {{--                                        <h5>Blue denim shirt</h5>--}}
+                                        {{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                        <p class="">Buy it now: </p>
+                                        <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-sm">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-sm">High Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
                         </div>
-
-                        <div class="card-body text-center pt-4">
-
-                            <h5>Red hoodie</h5>
-                            <p class="mb-2 text-muted text-uppercase small">Hoodies</p>
-                            <ul class="rating">
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="far fa-star fa-sm text-primary"></i>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p><span class="mr-1"><strong>$35.99</strong></span></p>
-                            <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                                    class="fas fa-info-circle pr-2"></i>Details
-                            </button>
-                            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
-                                    data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-                                    class="far fa-heart"></i></button>
-
-                        </div>
-
                     </div>
-                    <!-- Card -->
+                    <!-- Rotating card -->
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
 
+                            <!-- Front Side -->
+                            <div class="face front">
+
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="mask card-up">
+                                    <img class="img-fluid w-100"
+                                         src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
+                                    <div class="mask rgba-black-slight"></div>
+                                </div>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Jordan 7 OG Olympic (1992)
+                                    </h4>
+                                    {{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+                                        {{--                                        <h5>Blue denim shirt</h5>--}}
+                                        {{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                        <p class="">Buy it now: </p>
+                                        <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-lg">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-lg">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-lg">Highest Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
+                        </div>
+                    </div>
+                    <!-- Rotating card -->
                 </div>
                 <!-- Grid column -->
-
                 <!-- Grid column -->
                 <div class="col-md-4 mb-5">
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
 
-                    <!-- Card -->
-                    <div class="card">
+                            <!-- Front Side -->
+                            <div class="face front">
 
-                        <div class="view zoom overlay">
-                            <img class="img-fluid w-100"
-                                 src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
-                                 alt="Sample">
-                            <h4 class="mb-0"><span class="badge badge-primary badge-pill badge-news">Sale</span></h4>
-                            <a href="#!">
-                                <div class="mask">
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="mask card-up">
                                     <img class="img-fluid w-100"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg">
+                                         src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
                                     <div class="mask rgba-black-slight"></div>
                                 </div>
-                            </a>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Jordan 7 OG Olympic (1992)
+                                    </h4>
+                                    {{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+                                        {{--                                        <h5>Blue denim shirt</h5>--}}
+                                        {{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                        <p class="">Buy it now: </p>
+                                        <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-lg">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-lg">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-lg">Highest Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
                         </div>
-
-                        <div class="card-body text-center pt-4">
-
-                            <h5>Grey sweater</h5>
-                            <p class="mb-2 text-muted text-uppercase small">Sweaters</p>
-                            <ul class="rating">
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-primary"></i>
-                                </li>
-                            </ul>
-                            <hr>
-                            <p><span class="text-danger mr-1"><strong>$21.99</strong></span><span
-                                    class="text-grey"><strong><s>$36.99</s></strong></span></p>
-                            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                                    class="fas fa-shopping-cart pr-2"></i>Add to cart
-                            </button>
-                            <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                                    class="fas fa-info-circle pr-2"></i>Details
-                            </button>
-                            <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
-                                    data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-                                    class="far fa-heart"></i></button>
-
-                        </div>
-
                     </div>
-                    <!-- Card -->
+                    <!-- Rotating card -->
+                    <!-- Rotating card -->
+                    <div class="card-wrapper">
+                        <div id="card-1" class="card card-rotating text-center">
 
+                            <!-- Front Side -->
+                            <div class="face front">
+
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img class="card-img-top" src="{{ asset('img/jordan-olympics-landing.jpg') }}" alt="Image with a photo of clouds.">
+                                </div>
+                                <!-- Avatar -->
+                                <div class="mask card-up">
+                                    <img class="img-fluid w-100"
+                                         src="{{ asset('img/jordan-olympic-landing-2.jpg') }}">
+                                    <div class="mask rgba-black-slight"></div>
+                                </div>
+                                <!-- Content -->
+                                <div class="card-body">
+                                    <h4 class="font-weight-bold mb-3">
+                                        Jordan 7 OG Olympic (1992)
+                                    </h4>
+                                    {{--                                    <p class="font-weight-bold blue-text">Web developer</p>--}}
+                                    <div class="card-body text-center pt-4">
+                                        {{--                                        <h5>Blue denim shirt</h5>--}}
+                                        {{--                                        <p class="mb-2 text-muted text-uppercase small">Shirts</p>--}}
+                                        <ul class="rating">
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star fa-sm text-success"></i>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <p>
+                                        <p class="">Buy it now: </p>
+                                        <span class="mr-1">
+                                                <a href="" class="btn btn-success">
+                                                    $500.00
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <div class="row">
+                                            <button type="button"
+                                                    class="btn btn-warning btn-sm mr-1 mb-2">
+                                                <i class="fas fa-shopping-cart pr-2"></i>
+                                                Add to cart
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-light btn-sm mr-1 mb-2 rotate-btn"
+                                                    data-card="card-1">
+                                                <i class="fas fa-info-circle pr-2"></i>
+                                                Market Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Front Side -->
+
+                            <!-- Back Side -->
+                            <div class="face back">
+                                <div class="card-body">
+
+                                    <!-- Content -->
+                                    <h4 class="font-weight-bold mb-0">Details</h4>
+                                    <hr>
+
+                                    <div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btn-lg">Last Sold: 500</button>
+                                        <button type="button" class="btn btn-warning btn-lg">Make An Offer</button>
+                                        <button type="button" class="btn btn-danger btn-lg">Highest Bid</button>
+                                    </div>
+                                    <hr>
+                                    <!-- Social Icons -->
+                                    <h4 class="font-weight-bold mb-0">Share this product</h4>
+                                    <ul class="list-inline py-2">
+                                        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                    <!-- Triggering button -->
+                                    <a class="rotate-btn" data-card="card-1">
+                                        <i class="fas fa-undo"></i>
+                                        Go Back
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Back Side -->
+
+                        </div>
+                    </div>
+                    <!-- Rotating card -->
                 </div>
                 <!-- Grid column -->
+                </div>
+                <!-- Grid column -->
+
+
 
             </div>
             <!-- Grid row -->
@@ -884,21 +1088,18 @@
                                     class="fas fa-info-circle pr-2"></i>Details
                             </button>
                             <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
-                                    data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-                                    class="far fa-heart"></i></button>
-
+                                    data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
-
                     </div>
                     <!-- Card -->
-
                 </div>
                 <!-- Grid column -->
-                loading...
             </div>
             <!-- Grid row -->
-
         </section>
+
         <!--Section: Block Content-->
 
     </div>
