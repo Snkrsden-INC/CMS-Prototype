@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- MD Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/mdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mdb.ecommerce.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/accordion-extended.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animations-extended.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cards-extended.min.css') }}">

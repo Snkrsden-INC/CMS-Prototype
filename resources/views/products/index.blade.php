@@ -30,7 +30,8 @@
                             <tr>
                                 <td class="pt-3-half" contenteditable="true">{{ $product->name }}</td>
                                 <td class="pt-3-half">
-                                    <a href="{{ route('products.show', $product) }}" class="btn btn-success btn-rounded btn-sm">
+                                    <a href="{{ route('products.show', $product) }}"
+                                       class="btn btn-success btn-rounded btn-sm">
                                         Show Case
                                     </a>
                                 </td>
@@ -43,19 +44,25 @@
                                 <td class="pt-3-half" contenteditable="true">{{ $product->release_date }}</td>
 
                                 <td>
-                                    <span class="table-remove">
+                                    @if($product->trashed())
+                                        <p class="text-danger">
+                                            Currently Trashed..
+                                        </p>
+                                    @else
+                                        <span class="table-remove">
                                         <a href="{{ route('products.edit', $product) }}" type="button"
                                            class="btn btn-danger btn-success btn-rounded btn-sm my-0">
                                             Edit
                                         </a>
                                     </span>
+                                    @endif
                                 </td>
                                 <td>
                                     <span class="table-remove">
                                          <button type="button" class="btn btn-danger btn-rounded btn-sm my-0"
                                                  data-toggle="modal"
                                                  data-target="#deleteModal" onclick="handleDelete({{ $product->id }})">
-                                             Remove
+                                             {{ $product->trashed() ? 'Delete' : 'Remove' }}
                                          </button>
                                     </span>
                                 </td>
@@ -90,7 +97,7 @@
                         </button>
                     </div>
                     <div class="text-center modal-body">
-                        {{ isset($product->deleted_at) ? "Are you sure? This can't be undone" : 'Are you sure you want to delete this product? You can undo this in your "trash" folder.' }}
+                        {{ isset($product->deleted_at) ? "Are you sure? This can't be undone" : 'Are you sure you want to delete this product? You can undo this in your "removed products" folder.' }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark" data-dismiss="modal">No, Go Back</button>
@@ -111,3 +118,5 @@
         }
     </script>
 @endsection
+
+{{--TODO: Change products to product in delete route to correct soft delete issue--}}

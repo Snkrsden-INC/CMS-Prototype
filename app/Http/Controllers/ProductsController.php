@@ -14,9 +14,10 @@
          *
          * @return \Illuminate\Http\Response
          */
-        public function index()
+        public function index(Product $products)
         {
-            return view('products.index')->with('products', Product::all());
+//            $products = Product::orderBy('id', 'DESC')->get();
+            return view('products.index')->with('products', Product::orderBy('id', 'DESC')->get());
         }
 
         /**
@@ -64,7 +65,7 @@
          */
         public function show(Product $product)
         {
-            return view('products.show');
+            return view('products.show')->with('product', $product);
         }
 
         /**
@@ -102,7 +103,7 @@
          * @param \App\Product $product
          * @return \Illuminate\Http\Response
          */
-        public function destroy($id)
+        public function destroy(Product $product, $id)
         {
             $product = Product::withoutTrashed()->where('id', $id)->firstOrFail();
 
@@ -113,7 +114,7 @@
                 $product->delete();
             }
             // Flash message to user
-            session()->flash('success', "$product->name has been removed, you can restore this item by visiting your removed items list.");
+            session()->flash('success', "$product->name has been removed, you can restore this item by visiting your removed products list.");
 
             // Redirect user to Product index page
             return redirect(route('products.index'));

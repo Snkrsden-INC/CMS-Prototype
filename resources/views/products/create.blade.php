@@ -25,14 +25,13 @@
                 <div class="md-form mt-3">
                     <input name="name" type="text"
                            id="name" class="form-control"
-                           value="{{ isset($product->name) ? "$product->name" : "Product Name" }}">
+                           value="{{ isset($product->name) ? "$product->name" : "" }}">
                     <label for="name">{{ isset($product->name) ? "$product->name" : "Product Name" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <!--Material textarea-->
                     <div class="md-form">
-                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->desc" : ""}}
-                        </textarea>
+                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->desc" : ""}}</textarea>
                         <label for="desc">{{ isset($product) ? "$product->desc" : "Product Description" }}</label>
                     </div>
                 </div>
@@ -41,8 +40,7 @@
                            id="release_date" class="form-control"
                            value="{{ isset($product) ? "$product->release_date" : "" }}"
                     >
-                    <label
-                        for="release_date">{{ isset($product->release_date) ? "$product->release_date" : "Product Release Date" }}</label>
+                    <label for="release_date">{{ isset($product->release_date) ? "$product->release_date" : "Product Release Date" }}</label>
                 </div>
                 <div class="input-group">
                     @if (isset($product))
