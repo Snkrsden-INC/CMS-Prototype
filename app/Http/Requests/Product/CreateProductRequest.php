@@ -26,7 +26,12 @@ class CreateProductRequest extends FormRequest
         $price_value = 1000000;
         return [
             'name' =>['required', 'unique:products'],
+            'ticker' =>['required', 'unique:products'],
+            'condition' =>['required'],
             'desc' =>['required', 'min:10'],
+            'content' =>['required', 'min:10'],
+            'colorway' =>['required'],
+            'style' =>['required'],
             'image' =>['required', 'image'],
             'release_date' => ['required'],
             'price' => ['required', 'numeric', "between:0, $price_value"]

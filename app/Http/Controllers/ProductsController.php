@@ -44,6 +44,11 @@
             // Store product
             Product::create([
                 'name' => $request->name,
+                'colorway' => $request->colorway,
+                'style' => $request->style,
+                'condition' => $request->condition,
+                'ticker' => $request->ticker,
+                'content' => $request->content,
                 'desc' => $request->desc,
                 'image' => $request->file('image')->store('products', 'public'),
                 'release_date' => $request->release_date,
@@ -101,9 +106,11 @@
          * Remove the specified resource from storage.
          *
          * @param \App\Product $product
+         * @param $id
          * @return \Illuminate\Http\Response
+         * @throws \Exception
          */
-        public function destroy(Product $product, $id)
+        public function destroy(Product $product ,$id)
         {
             $product = Product::withoutTrashed()->where('id', $id)->firstOrFail();
 

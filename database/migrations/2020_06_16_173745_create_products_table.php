@@ -18,15 +18,15 @@
         {
             Schema::create('products', function (Blueprint $table) {
                 $table->id();
-                $table->longText('desc');
                 $table->string('name');
-//                $table->string('style');
-//                $table->string('colorway');
-
-//                $table->string('condition');
-//                $table->string('ticker');
-//                $table->enum('authenticity', array('Authentic', 'Counterfeit'));
-//                $table->decimal('price');
+                $table->text('content')->nullable();
+                $table->longText('desc');
+                $table->string('style')->nullable();
+                $table->string('colorway');
+                $table->string('condition');
+                $table->string('ticker');
+                $table->enum('authenticity', array('Authentic', 'Counterfeit'))->nullable();
+                $table->decimal('price');
                 $table->date('release_date')->nullable();
                 $table->timestamps();
             });

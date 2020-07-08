@@ -29,9 +29,41 @@
                     <label for="name">{{ isset($product->name) ? "$product->name" : "Product Name" }}</label>
                 </div>
                 <div class="md-form mt-3">
+                    <input name="ticker" type="text"
+                           id="ticker" class="form-control"
+                           value="{{ isset($product->ticker) ? "$product->ticker" : "" }}">
+                    <label for="name">{{ isset($product->ticker) ? "$product->ticker" : "Product Ticker" }}</label>
+                </div>
+                <div class="md-form mt-3">
+                    <input name="style" type="text"
+                           id="style" class="form-control"
+                           value="{{ isset($product->style) ? "$product->style" : "" }}">
+                    <label for="name">{{ isset($product->style) ? "$product->syle" : "Product Style" }}</label>
+                </div>
+                <div class="md-form mt-3">
+{{--                    COLORWAY--}}
+                    <input name="colorway" type="text"
+                           id="colorway" class="form-control"
+                           value="{{ isset($product->colorway) ? "$product->colorway" : "" }}">
+                    <label for="name">{{ isset($product->colorway) ? "$product->colorway" : "Product Colorway" }}</label>
+                </div>
+                <div class="md-form mt-3">
+                    <input name="condition" type="text"
+                           id="condition" class="form-control"
+                           value="{{ isset($product->condition) ? "$product->condition" : "" }}">
+                    <label for="condition">{{ isset($product->condition) ? "$product->condition" : "Product Condition" }}</label>
+                </div>
+                <div class="md-form mt-3">
                     <!--Material textarea-->
                     <div class="md-form">
-                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->desc" : ""}}</textarea>
+                        <textarea name="content" id="content" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->content" : ""}}</textarea>
+                        <label for="content">{{ isset($product->content) ? "$product->content" : "Product Content" }}</label>
+                    </div>
+                </div>
+                <div class="md-form mt-3">
+                    <!--Material textarea-->
+                    <div class="md-form">
+                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="5">{{isset($product) ? "$product->desc" : ""}}</textarea>
                         <label for="desc">{{ isset($product) ? "$product->desc" : "Product Description" }}</label>
                     </div>
                 </div>

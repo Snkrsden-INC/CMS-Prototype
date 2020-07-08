@@ -108,7 +108,7 @@
 
                         <h5>{{ $product->name }}</h5>
                         <p class="mb-2 text-muted text-uppercase small">Sneakers</p>
-                        {{--                        TODO: Add a relationship between products and categories. --}}
+                        {{--                        TODO: Add a relationship between products and categories(models). --}}
                         <ul class="rating">
                             <li>
                                 <i class="fas fa-star fa-sm text-primary"></i>
@@ -133,7 +133,7 @@
                             </span>
                         </p>
                         <p class="pt-1">
-                            {{ $product->desc }}
+                            {{ $product->content }}
                         </p>
                         <div class="table-responsive">
                             <table class="table table-sm table-borderless mb-0">
@@ -145,7 +145,7 @@
                                 </tr>
                                 <tr>
                                     <th class="pl-0 w-25" scope="row"><strong>Colorway</strong></th>
-                                    <td>Bright Ceramic/Green Spark</td>
+                                    <td>{{ $product->colorway }}</td>
 {{--                                    TODO: Add a colorway field to products table in database--}}
                                 </tr>
                                 <tr>
@@ -235,7 +235,7 @@
                     <div class="tab-pane fade show active" id="description" role="tabpanel"
                          aria-labelledby="description-tab">
                         <h5>Product Description</h5>
-                        <p class="small text-muted text-uppercase mb-2">Shirts</p>
+                        <p class="small text-muted text-uppercase mb-2">Sneakers</p>
                         <ul class="rating">
                             <li>
                                 <i class="fas fa-star fa-sm text-primary"></i>
@@ -253,12 +253,12 @@
                                 <i class="far fa-star fa-sm text-primary"></i>
                             </li>
                         </ul>
-                        <h6>12.99 $</h6>
-                        <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo.
-                            Sit
-                            error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.
-                            Distinctio,
-                            officia quis dolore quos sapiente tempore alias.</p>
+                        <h6>
+                            <p class="lead text-success">{{ __('$ ' . $product->price) }}</p>
+                        </h6>
+                        <p class="pt-1">
+                            {{ $product->desc }}
+                        </p>
                     </div>
                     <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
                         <h5>Additional Information</h5>

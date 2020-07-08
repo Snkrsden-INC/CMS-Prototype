@@ -35,11 +35,15 @@
                                         Show Case
                                     </a>
                                 </td>
-                                <td class="pt-3-half" contenteditable="true">{{ $product->desc }}</td>
                                 <td class="pt-3-half" contenteditable="true">
+                                    <div class="container">
+                                        {{ $product->desc }}
+                                    </div>
+                                </td>
+                                <td class="pt-3-half" contenteditable="false">
                                     <img src="{{ asset('storage/'.$product->image) }}" alt="thumbnail"
-                                         class="img-thumbnail hoverable"
-                                         style="width: 200px">
+                                         class="img-fluid hoverable"
+                                         style="width: 300px;">
                                 </td>
                                 <td class="pt-3-half" contenteditable="true">{{ $product->release_date }}</td>
 
@@ -59,11 +63,15 @@
                                 </td>
                                 <td>
                                     <span class="table-remove">
-                                         <button type="button" class="btn btn-danger btn-rounded btn-sm my-0"
-                                                 data-toggle="modal"
-                                                 data-target="#deleteModal" onclick="handleDelete({{ $product->id }})">
+                                        <form action="" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="button"
+                                                    class="btn btn-danger btn-rounded btn-sm my-0"
+                                                    data-toggle="modal" data-target="#deleteModal">
                                              {{ $product->trashed() ? 'Delete' : 'Remove' }}
                                          </button>
+                                        </form>
                                     </span>
                                 </td>
                                 <td>
@@ -90,7 +98,7 @@
                 <div class="modal-content">
                     <div class="modal-header danger-color text-center">
                         <h5 class="modal-title col-12 text-center" id="deleteModalLabel">
-                            Remove Category
+                            Remove Product
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -112,10 +120,11 @@
 
 @section('scripts')
     <script>
-        function handleDelete(id) {
-            let form = document.getElementById('deleteProductForm');
-            form.action = `/products/${id}`
-        }
+        // function handleDelete(id) {
+        //     console.log(id);
+        //     let form = document.getElementById('deleteProductForm');
+        //     form.action = `/products/${id}`
+        // }
     </script>
 @endsection
 

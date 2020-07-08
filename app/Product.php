@@ -10,6 +10,8 @@
         use SoftDeletes;
 
         protected $fillable = [
-            'name', 'desc', 'image', 'release_date', 'price'
+            'name', 'desc', 'image', 'release_date', 'price',
+            'ticker', 'content', 'condition', 'colorway', 'style',
+
         ];
     }

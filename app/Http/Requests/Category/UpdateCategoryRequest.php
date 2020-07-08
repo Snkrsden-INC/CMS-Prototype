@@ -23,8 +23,18 @@ class UpdateCategoryRequest extends FormRequest
      */
     public function rules()
     {
+        $price_value = 1000000;
         return [
-            'name' => ['required']
+            'name' =>['required'],
+            'ticker' =>['required'],
+            'condition' =>['required'],
+            'desc' =>['required', 'min:10'],
+            'content' =>['required', 'min:10'],
+            'colorway' =>['required'],
+            'style' =>['required'],
+            'image' =>['required', 'image'],
+            'release_date' => ['required'],
+            'price' => ['required', 'numeric', "between:0, $price_value"]
         ];
     }
 }
