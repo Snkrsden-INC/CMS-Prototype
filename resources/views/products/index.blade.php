@@ -41,17 +41,19 @@
                                     </div>
                                 </td>
                                 <td class="pt-3-half" contenteditable="false">
-                                    <img src="{{ asset('storage/'.$product->image) }}" alt="thumbnail"
-                                         class="img-fluid hoverable"
-                                         style="width: 300px;">
+                                    <a href="{{ route('products.show', $product) }}">
+                                        <img src="{{ asset('storage/'.$product->image) }}" alt="thumbnail"
+                                             class="img-fluid hoverable"
+                                             style="width: 300px;">
+                                    </a>
                                 </td>
                                 <td class="pt-3-half" contenteditable="true">{{ $product->release_date }}</td>
 
                                 <td>
                                     @if($product->trashed())
-                                        <p class="text-danger">
-                                            Currently Trashed..
-                                        </p>
+                                        <a href="" class="btn btn-success btn-sm btn-rounded">
+                                            Restore
+                                        </a>
                                     @else
                                         <span class="table-remove">
                                         <a href="{{ route('products.edit', $product) }}" type="button"
@@ -63,12 +65,10 @@
                                 </td>
                                 <td>
                                     <span class="table-remove">
-                                        <form action="" method="POST">
+                                        <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="button"
-                                                    class="btn btn-danger btn-rounded btn-sm my-0"
-                                                    data-toggle="modal" data-target="#deleteModal">
+                                            <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">
                                              {{ $product->trashed() ? 'Delete' : 'Remove' }}
                                          </button>
                                         </form>
@@ -86,35 +86,6 @@
         </div>
     </div>
     <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog modal-fluid modal-full-height modal-bottom" role="document">
-            <form action="" method="POST" id="deleteProductForm">
-                @csrf
-                @method('DELETE')
-                <div class="modal-content">
-                    <div class="modal-header danger-color text-center">
-                        <h5 class="modal-title col-12 text-center" id="deleteModalLabel">
-                            Remove Product
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="text-center modal-body">
-                        {{ isset($product->deleted_at) ? "Are you sure? This can't be undone" : 'Are you sure you want to delete this product? You can undo this in your "removed products" folder.' }}
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal">No, Go Back</button>
-                        <button type="submit" class="btn btn-danger">Yes, Delete</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
     <!-- Editable table -->
 @endsection
 

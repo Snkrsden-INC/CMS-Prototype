@@ -14,4 +14,9 @@
             'ticker', 'content', 'condition', 'colorway', 'style',
 
         ];
+
+        public function category()
+        {
+            return $this->belongsTo(Category::class);
+        }
     }

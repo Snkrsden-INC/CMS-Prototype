@@ -2,10 +2,12 @@
 
     namespace App\Http\Controllers;
 
+    use App\Category;
     use App\Http\Requests\Product\CreateProductRequest;
     use App\Product;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\Storage;
 
     class ProductsController extends Controller
     {
@@ -28,7 +30,7 @@
         public function create()
         {
 
-            return view('products.create');
+            return view('products.create')->with('categories', Category::all());
         }
 
         /**
@@ -110,11 +112,12 @@
          * @return \Illuminate\Http\Response
          * @throws \Exception
          */
-        public function destroy(Product $product ,$id)
+        public function destroy($id)
         {
-            $product = Product::withoutTrashed()->where('id', $id)->firstOrFail();
+            $product = Product::withTrashed()->where('id', $id)->firstOrFail();
 
             if ($product->trashed()) {
+                Storage::delete($product->image);
                 $product->forceDelete();
             } else {
                 // Delete product(Product model has soft delete)

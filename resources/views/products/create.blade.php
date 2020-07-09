@@ -25,45 +25,72 @@
                 <div class="md-form mt-3">
                     <input name="name" type="text"
                            id="name" class="form-control"
-                           value="{{ isset($product->name) ? "$product->name" : "" }}">
+                           value="{{ isset($product->name) ? "$product->name" : old('name')}}"
+                    >
                     <label for="name">{{ isset($product->name) ? "$product->name" : "Product Name" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <input name="ticker" type="text"
                            id="ticker" class="form-control"
-                           value="{{ isset($product->ticker) ? "$product->ticker" : "" }}">
+                           value="{{ isset($product->ticker) ? "$product->ticker" : old('ticker') }}"
+                    >
                     <label for="name">{{ isset($product->ticker) ? "$product->ticker" : "Product Ticker" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <input name="style" type="text"
                            id="style" class="form-control"
-                           value="{{ isset($product->style) ? "$product->style" : "" }}">
+                           value="{{ isset($product->style) ? "$product->style" : old('style') }}">
                     <label for="name">{{ isset($product->style) ? "$product->syle" : "Product Style" }}</label>
                 </div>
                 <div class="md-form mt-3">
-{{--                    COLORWAY--}}
+                    <!-- Example split danger button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">Category</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            @if(count($categories) > 0)
+                                @foreach($categories as $category)
+{{--                                    <a value="something" class="dropdown-item" href="#">{{ $category->name }}</a>--}}
+                                    <option value="{{ $category->id }}" class="dropdown-item">
+                                        {{ $category->name }}
+                                    </option>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                <div class="md-form mt-3">
+                    {{--                    COLORWAY--}}
                     <input name="colorway" type="text"
                            id="colorway" class="form-control"
-                           value="{{ isset($product->colorway) ? "$product->colorway" : "" }}">
-                    <label for="name">{{ isset($product->colorway) ? "$product->colorway" : "Product Colorway" }}</label>
+                           value="{{ isset($product->colorway) ? "$product->colorway" : old('colorway') }}">
+                    <label
+                        for="name">{{ isset($product->colorway) ? "$product->colorway" : "Product Colorway" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <input name="condition" type="text"
                            id="condition" class="form-control"
-                           value="{{ isset($product->condition) ? "$product->condition" : "" }}">
-                    <label for="condition">{{ isset($product->condition) ? "$product->condition" : "Product Condition" }}</label>
+                           value="{{ isset($product->condition) ? "$product->condition" : old('condition') }}">
+                    <label
+                        for="condition">{{ isset($product->condition) ? "$product->condition" : "Product Condition" }}</label>
                 </div>
                 <div class="md-form mt-3">
                     <!--Material textarea-->
                     <div class="md-form">
-                        <textarea name="content" id="content" class="md-textarea form-control" rows="3">{{isset($product) ? "$product->content" : ""}}</textarea>
-                        <label for="content">{{ isset($product->content) ? "$product->content" : "Product Content" }}</label>
+                        <textarea name="content" id="content" class="md-textarea form-control"
+                                  rows="3">{{isset($product) ? "$product->content" : ""}}{{ old('content') }}</textarea>
+                        <label
+                            for="content">{{ isset($product->content) ? "$product->content" : "Product Content" }}</label>
                     </div>
                 </div>
                 <div class="md-form mt-3">
                     <!--Material textarea-->
                     <div class="md-form">
-                        <textarea name="desc" id="desc" class="md-textarea form-control" rows="5">{{isset($product) ? "$product->desc" : ""}}</textarea>
+                        <textarea name="desc" id="desc" class="md-textarea form-control"
+                                  rows="5">{{isset($product) ? "$product->desc" : ""}}{{ old('desc') }}</textarea>
                         <label for="desc">{{ isset($product) ? "$product->desc" : "Product Description" }}</label>
                     </div>
                 </div>
@@ -72,7 +99,8 @@
                            id="release_date" class="form-control"
                            value="{{ isset($product) ? "$product->release_date" : "" }}"
                     >
-                    <label for="release_date">{{ isset($product->release_date) ? "$product->release_date" : "Product Release Date" }}</label>
+                    <label
+                        for="release_date">{{ isset($product->release_date) ? "$product->release_date" : "Product Release Date" }}</label>
                 </div>
                 <div class="input-group">
                     @if (isset($product))
