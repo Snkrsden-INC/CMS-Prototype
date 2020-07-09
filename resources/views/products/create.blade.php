@@ -43,24 +43,15 @@
                     <label for="name">{{ isset($product->style) ? "$product->syle" : "Product Style" }}</label>
                 </div>
                 <div class="md-form mt-3">
-                    <!-- Example split danger button -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-warning">Category</button>
-                        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            @if(count($categories) > 0)
-                                @foreach($categories as $category)
-{{--                                    <a value="something" class="dropdown-item" href="#">{{ $category->name }}</a>--}}
-                                    <option value="{{ $category->id }}" class="dropdown-item">
-                                        {{ $category->name }}
-                                    </option>
-                                @endforeach
-                            @endif
-                        </div>
-                    </div>
+                    @if(count($categories) > 0)
+                        <select class="browser-default custom-select">
+                            <option selected>Category</option>
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    @endif
+
                 </div>
                 <div class="md-form mt-3">
                     {{--                    COLORWAY--}}
@@ -152,3 +143,4 @@
     </div>
     <!-- Material form contact -->
 @endsection
+
