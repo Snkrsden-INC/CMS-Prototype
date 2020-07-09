@@ -55,6 +55,7 @@
                 'image' => $request->file('image')->store('products', 'public'),
                 'release_date' => $request->release_date,
                 'price' => $request->price,
+                'category_id' => $request->category
             ]);
             // Flash message
             session()->flash('success', "{$request->name} Created.");

@@ -44,7 +44,7 @@
                 </div>
                 <div class="md-form mt-3">
                     @if(count($categories) > 0)
-                        <select class="browser-default custom-select">
+                        <select name="category" class="browser-default custom-select">
                             <option selected>Category</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>

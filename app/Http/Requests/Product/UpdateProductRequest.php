@@ -33,7 +33,8 @@ class UpdateProductRequest extends FormRequest
             'style' =>['required'],
             'image' =>['required', 'image'],
             'release_date' => ['required'],
-            'price' => ['required', 'numeric', "between:0, $price_value"]
+            'price' => ['required', 'numeric', "between:0, $price_value"],
+            'category' => ['required']
         ];
     }
 }

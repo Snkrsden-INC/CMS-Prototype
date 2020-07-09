@@ -11,7 +11,7 @@
 
         protected $fillable = [
             'name', 'desc', 'image', 'release_date', 'price',
-            'ticker', 'content', 'condition', 'colorway', 'style',
+            'ticker', 'content', 'condition', 'colorway', 'style', 'category_id'
 
         ];
 
